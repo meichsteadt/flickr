@@ -1,0 +1,190 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f3f5f6;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+.splash {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.background, .background2 {
+  background: url('https://s.yimg.com/uy/build/images/sohp/sohp-grid-resized.jpg');
+  background-size: 100%;
+  height: 1720.85px;
+  width: 100%;
+  background-repeat: repeat;
+  filter: brightness(50%);
+  animation: scroll 256s linear infinite;
+  margin-top: -2px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  h1 {
+    font-size: 56px;
+    line-height: 56px;
+    margin-bottom: 5px;
+    margin: .67em 0;
+  }
+  h4 {
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+button, .button {
+  padding: 18px 50px;
+  background-color: #fefefe;
+  border: none;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 52px;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 1;
+  padding: 0 15px;
+  color: #fff;
+  &.navbar {
+    border-radius: 0 !important;
+  }
+  .logo {
+    float: left;
+    margin-left: 15px;
+    height: 100%;
+    h3 {
+      position: absolute;
+      transform: translateY(-25%);
+      font-size: 28px;
+    }
+  }
+  .buttons {
+    float: right;
+    font-size: 16px;
+    transform: translateY(25%);
+    a {
+      color: inherit;
+    }
+    button {
+      margin: 0 15px;
+      padding: 5px 15px;
+      font-size: 16px;
+      border-radius: 2px;
+    }
+  }
+  .fa-cloud-upload {
+    color: #fff;
+  }
+   li > a {
+    color: #fff !important;
+    transition: color .5s;
+    &:hover {
+      color: #9d9d9d !important;
+    }
+  }
+}
+
+.box {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 7px;
+  .button {
+    background-color: #1057ae;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    float: right;
+    margin-bottom: 10px;
+    &:hover {
+      background-color: #00357a;
+    }
+  }
+  .actions {
+    margin-bottom: 35px;
+  }
+  label {
+    color: #FF0084;
+  }
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  transition: color .4s;
+  &:hover {
+    color: #9d9d9d;
+  }
+  h3 {
+    margin: 0;
+  }
+}
+
+.container-fluid {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.blue {
+  color: #1057ae !important;
+}
+
+.input-group {
+  input {
+    border: none;
+  }
+  .input-group-addon {
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+  }
+}
+
+.dropdown-img {
+  a {
+    padding: 0 !important;
+    display: table;
+  }
+}
+
+.flickr {
+  margin: 0;
+  border-radius: 50%;
+  width: 36px;
+  margin-top: 7px;
+  vertical-align: middle;
+}
+
+@keyframes scroll {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-100%);}
+}

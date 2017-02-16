@@ -1,0 +1,6 @@
+<%= link_to 'Edit', edit_profile_path(@profile) %>
+
+<img src="<%= @profile.profile_image %> " alt="" />
+<p>
+  <%= time_ago_in_words(@profile.created_at) %>
+</p>
