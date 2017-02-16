@@ -13,6 +13,7 @@ class ImagesController < ApplicationController
     @profile = Profile.find(params[:profile_id])
     @image = @profile.images.new(image_params)
     if @profile.save
+      flash[:notice] = "Photo successfully uploaded"
       redirect_to profile_images_path
     else
       render 'new'

@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>FlickrClone</title>
+    <%= favicon_link_tag 'favicon.ico' %>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +13,7 @@
   </head>
 
   <body>
-    <% if current_page?('/') || current_page?('/users/sign_in')%>
+    <% if current_page?('/') || current_page?('/users/sign_in') || current_page?('/users/sign_up')%>
     <nav>
       <div class="logo">
         <h3>flickr</h3>
@@ -42,7 +44,9 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li> <%= link_to 'You', profile_path(Profile.find_by_user_id(current_user.id)) %> </li>
+              <% if current_user %>
+                <li> <%= link_to 'You', profile_path(Profile.find_by_user_id(current_user.id)) %> </li>
+              <% end %>
               <li><a href="#">Explore</a></li>
               <li><a href="#">Create</a></li>
             </ul>

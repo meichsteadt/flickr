@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  
+  has_one :profile
+
   def profile
     if Profile.find_by_user_id(self.id)
       Profile.find_by_user_id(self.id)
