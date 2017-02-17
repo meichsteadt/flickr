@@ -2,18 +2,18 @@ class ProfilesController < ApplicationController
   protect_from_forgery with: :exception
   def show
     @profile = Profile.find(params[:id])
+    @images = @profile.images
   end
 
   def edit
-    @profile = current_user.profile
+    @profile = Profile.find_by_user_id(current_user.id)
   end
 
   def update
   @profile = Profile.find(params[:id])
   if @profile.update(profile_params)
-    redirect_to images_path
-  else
-    render 'edit'
+    flash[:notice] = "Successfully updated profile"
+    redirect_to profile_images_path(@profile)
   end
 end
 

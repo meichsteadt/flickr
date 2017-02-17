@@ -5,7 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :profile
-
+  def has_profile
+    if Profile.find_by_user_id(self.id)
+      true
+    else
+      false
+    end
+  end
+  
   def profile
     if Profile.find_by_user_id(self.id)
       Profile.find_by_user_id(self.id)

@@ -62,6 +62,10 @@ button, .button {
   font-size: 22px;
   font-weight: 800;
   border-radius: 4px;
+  transition: color .5s;
+  &:hover {
+    color: #9d9d9d !important;
+  }
 }
 
 nav {
@@ -80,6 +84,13 @@ nav {
     float: left;
     margin-left: 15px;
     height: 100%;
+    a {
+      color: #fff;
+      transition: color .5s;
+      &:hover {
+        color: #9d9d9d !important;
+      }
+    }
     h3 {
       position: absolute;
       transform: translateY(-25%);
@@ -91,13 +102,22 @@ nav {
     font-size: 16px;
     transform: translateY(25%);
     a {
-      color: inherit;
+      color: #fff;
+      transition: color .5s;
+      &:hover {
+        color: #9d9d9d !important;
+        text-decoration: none;
+      }
     }
     button {
       margin: 0 15px;
       padding: 5px 15px;
       font-size: 16px;
       border-radius: 2px;
+      transition: color .5s;
+      &:hover {
+        color: #9d9d9d !important;
+      }
     }
   }
   .fa-cloud-upload {
@@ -184,6 +204,27 @@ nav {
   vertical-align: middle;
 }
 
+.background-image {
+  background: url('https://s.yimg.com/pw/images/coverphoto04_h.jpg.v3') center no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 150%;
+  margin: -30px;
+  position: absolute;
+  left: 0;
+  margin-top: -50px;
+}
+
+.padding {
+  margin-bottom: 150px;
+}
+
+.image {
+  height: 280px;
+  .panel {
+    background-color: transparent;
+  }
+}
 @keyframes scroll {
   0% {transform: translateY(0);}
   100% {transform: translateY(-100%);}

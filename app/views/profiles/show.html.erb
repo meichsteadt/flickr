@@ -1,6 +1,6 @@
-<%= link_to 'Edit', edit_profile_path(@profile) %>
+<div class="background-image"></div>
+<div class="padding"></div>
 
-<img src="<%= @profile.profile_image %> " alt="" />
-<p>
-  <%= time_ago_in_words(@profile.created_at) %>
-</p>
+<% @images.each do |image| %>
+  <div class="col-md-4 image" style="background: url('<%= image.image_post %>'); background-size: cover;"></div>
+<% end %>

@@ -1,10 +1,8 @@
+<div class="background-image"></div>
+<div class="padding"></div>
+<%= flash[:notice] %>
 <div class="row">
-  <%= flash[:notice] %>
   <% @images.each do |image| %>
-    <div class="col-md-4">
-      <div class="panel">
-        <img src="<%= image.image_post %>" alt="" />
-      </div>
-    </div>
+  <div class="col-md-4 image" style="background: url('<%= image.image_post %>'); background-size: cover;"></div>
   <% end %>
 </div>

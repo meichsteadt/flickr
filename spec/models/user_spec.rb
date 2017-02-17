@@ -12,11 +12,12 @@ describe User do
   end
   it "will return the profile of the user if it doesn't have one" do
     user = FactoryGirl.create(:user)
+    Profile.create(user_id: user.id, first_name: 'Henry')
     expect(user.profile).to eq Profile.find_by_user_id(user.id)
   end
   it "will return the profile of the user if it does have one" do
     user = FactoryGirl.create(:user)
-    profile = Profile.create(user_id: user.id)
+    profile = Profile.create(user_id: user.id, first_name: 'Henry')
     expect(user.profile).to eq Profile.find_by_user_id(user.id)
   end
 end
